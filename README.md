@@ -19,7 +19,10 @@ In such a case, fine-tuning is more likely to result in the desired output. More
 ### Project Guide 
 The flow will be directed in such a way that a user states their desires (in terms of data) and how they want to interact with the RAG system or the output necessity. (Could be a dialogue, chat or a one-time question, summary- which in our case would be deciding to use RAG-Token or RAG-Sequence).
 Finally we are opted with the option to either allow a prompt from the user and evaluate (analyze) that prompt from the user or just accept the parameters or desired instructions and generate prompts they should use in their RAG system.
-Through our back end, we will be going through Automatic Evaluation Data Generation Service using RAGAS and Prompt Testing and Ranking Service using Monte Carlo Matchmaking and ELO Rating System.
+
+### Approach and Technique
+
+Using the method of context learning, a new data has been handed in, we will take in that input and store it in a vector database so it is embedded and ready for the next steps. The data will be chunked and converted into n-dimensions(Vectored). That will be fed to the LLM(Large Language Model) where the LLM will generate a Natural Language back to us with an answer (in this case a set of prompts or An evaluation of the prompt, depending on the user’s desire). Through our back end, we will be going through Automatic Evaluation Data Generation Service using RAGAS and Prompt Testing and Ranking Service using Monte Carlo Matchmaking and ELO Rating System.
 So to implement this we have several steps to follow including 
 * Define the problem and the solution.
 * Design the architecture and the interface.
