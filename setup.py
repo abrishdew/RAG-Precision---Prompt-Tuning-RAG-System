@@ -1,39 +1,27 @@
-#!/usr/bin/env python
-
-"""The setup script."""
-
 from setuptools import setup, find_packages
 
-with open('README.md') as readme_file:
-    readme = readme_file.read()
-
-requirements = ['pandas>=1.1.0', 'numpy>=1.19.0', ]
-
-test_requirements = ['pytest>=3', ]
-
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
 setup(
-    author="10 Academy",
-    email="train@10academy.org",
-    python_requires='>=3.6',
+    name="rag",
+    version="1.0.6",
+    packages=find_packages(),
+    author="",
+    author_email="",
+    description="The RAGtriever chatbot",
+    long_description=open("readme.md").read(),
+    long_description_content_type="text/markdown",
+    url="",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
-    description="A Repository structure for all your project",
-    install_requires=requirements,
-    long_description=readme,
     include_package_data=True,
-    keywords='scripts',
-    name='scripts',
-    packages=find_packages(include=['scripts', 'scripts.*']),
-    test_suite='tests',
-    tests_require=test_requirements,
-    url='https://github.com/10xac/PythonPackageStructure',
-    version='0.1.0',
-    zip_safe=False,
+    install_requires=requirements,
+    extras_require={"dev": ["pytest", "wheel", "twine", "black", "setuptools"]}
 )
