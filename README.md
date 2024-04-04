@@ -14,7 +14,7 @@ First of all, public LLMs, like OpenAI’s ChatGPT or Google’s Bard have been 
 For the Using the Principles of RAG we are going to design a method to enhance an LLM’s information retrieval capabilities by drawing context from external documents. However, in certain use cases additional context is not enough. If a pre-trained LLM struggles with summarizing financial data or drawing insights on some specifically queried data,  it is hard to see how additional context in the form of a single document could help. 
 In such a case, fine-tuning is more likely to result in the desired output. Moreover, In the assignment we will be fine tuning a RAG model so it can generate an automated and optimized satisfactory prompt to produce desired outcomes.
 
-### Project Guide 
+### Workflow 
 The flow will be directed in such a way that a user states their desires (in terms of data) and how they want to interact with the RAG system or the output necessity. (Could be a dialogue, chat or a one-time question, summary- which in our case would be deciding to use RAG-Token or RAG-Sequence).
 Finally we are opted with the option to either allow a prompt from the user and evaluate (analyze) that prompt from the user or just accept the parameters or desired instructions and generate prompts they should use in their RAG system.
 
